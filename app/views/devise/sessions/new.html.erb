@@ -1,0 +1,42 @@
+<!-- log_in sign_in Page -->
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <h2 class="text-center">Log in</h2>
+    <br/>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <!--<%= f.label :email %><br />-->
+        <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <!-- <%= f.label :password %><br /> -->
+        <%= f.password_field :password, autocomplete: "off" , placeholder: "Password", class: "form-control" %>
+      </div>
+      <div class="remeber_me_check_box">
+        <% if devise_mapping.rememberable? %>
+          <%= f.check_box :remember_me%>Remember Me
+          <!-- <%= f.label :remember_me %> -->
+        <% end %>
+        <span class="pull-right">
+          <%= link_to "Forgot Password", new_user_password_path%>
+        </span>
+      </div>
+
+
+      <div class="actions">
+        <%= f.submit "Log in", class: "btn btn-normal btn-block" %>
+      </div>
+      <br/>
+      <h6>Don't have an Account?
+      <%= link_to "Sign up", new_user_registration_path %></h6>
+
+    <% end %>
+
+    <hr/>
+    <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class: "btn btn-block btn-facebook" %>
+    <!-- not needed
+    <%= render "devise/shared/links" %>
+    -->
+  </div>
+</div>
