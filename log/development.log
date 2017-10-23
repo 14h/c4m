@@ -7042,3 +7042,481 @@ To silence this deprecation warning, add the following:
 Completed 200 OK in 131ms (Views: 109.1ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/users/2" for 127.0.0.1 at 2017-10-23 12:34:08 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from show at /Users/abdallahkawji/c4m/app/controllers/users_controller.rb:3)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from show at /Users/abdallahkawji/c4m/app/controllers/users_controller.rb:3)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 38ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/users_controller.rb:3:in `show'
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.4ms)
+Started GET "/users/1" for 127.0.0.1 at 2017-10-23 12:34:15 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/users_controller.rb:3:in `show'
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.5ms)
+Started GET "/" for 127.0.0.1 at 2017-10-23 12:34:24 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered shared/_navbar.html.erb (4.6ms)
+  Rendered shared/_message.html.erb (0.6ms)
+Completed 200 OK in 4862ms (Views: 4855.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-10-23 12:34:32 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (45.9ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+  Rendered shared/_message.html.erb (0.5ms)
+Completed 200 OK in 166ms (Views: 103.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-10-23 12:34:34 +0200
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-10-23 12:34:34 +0200
+Started GET "/auth/facebook/callback?code=AQB4WnNVUrSYuYetbdG-lyk_wLR2pFg5-1y86P0nSU4N2xlCPnDZW4KUZg4qQTBXwOl05X5_1kfSHQvUc29KMOkHDpNXCFzQFIotVrDERM3Tz0YHpQ9wGYm0CDRLnSQ3viyvjcgPNWuJpWSDx8EOe70IcT5Yx4cc6dFcLgv2lrT_9FQtftzHIEavG84AN1rAI2UrmiwQGZ3TOHWbz_xYO7-__-8A7MOkJezav--XKFy9TcFS8tBwwfNeRu9rxFRUVouAQAGKKbMTKLr12Epi8Fcm4dE3F10fVDNbGhImQjUyZnGGO44S6k_9v4yL4d1DbyqEM-v7IaAToFXEvx-Nwfa3&state=8f5f6ba4aded9f3f0041deed57e9de8e66f4d2042f5eb02c" for 127.0.0.1 at 2017-10-23 12:34:36 +0200
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQB4WnNVUrSYuYetbdG-lyk_wLR2pFg5-1y86P0nSU4N2xlCPnDZW4KUZg4qQTBXwOl05X5_1kfSHQvUc29KMOkHDpNXCFzQFIotVrDERM3Tz0YHpQ9wGYm0CDRLnSQ3viyvjcgPNWuJpWSDx8EOe70IcT5Yx4cc6dFcLgv2lrT_9FQtftzHIEavG84AN1rAI2UrmiwQGZ3TOHWbz_xYO7-__-8A7MOkJezav--XKFy9TcFS8tBwwfNeRu9rxFRUVouAQAGKKbMTKLr12Epi8Fcm4dE3F10fVDNbGhImQjUyZnGGO44S6k_9v4yL4d1DbyqEM-v7IaAToFXEvx-Nwfa3", "state"=>"8f5f6ba4aded9f3f0041deed57e9de8e66f4d2042f5eb02c"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "abdallah.kawji@outlook.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-10-23 10:34:37.617563"], ["last_sign_in_at", "2017-10-22 12:47:25.991750"], ["sign_in_count", 6], ["updated_at", "2017-10-23 10:34:37.618766"], ["id", 11]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-23 12:34:37 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (2.8ms)
+  Rendered shared/_message.html.erb (0.8ms)
+Completed 200 OK in 86ms (Views: 81.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-10-23 12:36:33 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered collection of /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (41.5ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.1ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.5ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (163.9ms)
+Started GET "/users/2" for 127.0.0.1 at 2017-10-23 12:36:38 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/users_controller.rb:3:in `show'
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.2ms)
+Started GET "/users/11" for 127.0.0.1 at 2017-10-23 12:37:24 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    1: <div class="row">
+    2:   <div class="col-md-3">
+    3:     <div class="center">
+    4:       <%= image_tag avatar_url(@user), class: "avatar-full"%>
+    5:     </div>
+    6:     <div class="panel panel-default">
+    7:       <div class="panel-heading">
+  
+app/helpers/application_helper.rb:3:in `avatar_url'
+app/views/users/show.html.erb:4:in `_app_views_users_show_html_erb__4415569800852092149_70271132428100'
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.7ms)
+Started GET "/users/10" for 127.0.0.1 at 2017-10-23 12:39:08 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=10):
+  
+app/controllers/users_controller.rb:3:in `show'
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.0ms)
+Started GET "/users/10" for 127.0.0.1 at 2017-10-23 13:33:49 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (18.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 404 Not Found in 161ms (ActiveRecord: 18.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=10):
+  
+app/controllers/users_controller.rb:3:in `show'
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.5ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.5ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (32.8ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (180.0ms)
+Started GET "/users/11" for 127.0.0.1 at 2017-10-23 13:33:56 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    1: <div class="row">
+    2:   <div class="col-md-3">
+    3:     <div class="center">
+    4:       <%= image_tag avatar_url(@user), class: "avatar-full"%>
+    5:     </div>
+    6:     <div class="panel panel-default">
+    7:       <div class="panel-heading">
+  
+app/helpers/application_helper.rb:3:in `avatar_url'
+app/views/users/show.html.erb:4:in `_app_views_users_show_html_erb__4415569800852092149_70271185281860'
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.5ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.5ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (113.1ms)
+Started GET "/users/1" for 127.0.0.1 at 2017-10-23 13:34:11 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 17ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/users_controller.rb:3:in `show'
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.4ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.1ms)
+Started GET "/users/2" for 127.0.0.1 at 2017-10-23 13:34:15 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/users_controller.rb:3:in `show'
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.5ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.2ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (164.3ms)
+Started GET "/users/11" for 127.0.0.1 at 2017-10-23 13:34:18 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    1: <div class="row">
+    2:   <div class="col-md-3">
+    3:     <div class="center">
+    4:       <%= image_tag avatar_url(@user), class: "avatar-full"%>
+    5:     </div>
+    6:     <div class="panel panel-default">
+    7:       <div class="panel-heading">
+  
+app/helpers/application_helper.rb:3:in `avatar_url'
+app/views/users/show.html.erb:4:in `_app_views_users_show_html_erb__4415569800852092149_70271169131360'
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.1ms)
+Started GET "/users/11" for 127.0.0.1 at 2017-10-23 13:35:48 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (27.1ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    1: <div class="row">
+    2:   <div class="col-md-3">
+    3:     <div class="center">
+    4:       <%= image_tag avatar_url(@user), class: "avatar-full"%>
+    5:     </div>
+    6:     <div class="panel panel-default">
+    7:       <div class="panel-heading">
+  
+app/helpers/application_helper.rb:3:in `avatar_url'
+app/views/users/show.html.erb:4:in `_app_views_users_show_html_erb__4415569800852092149_70271188326700'
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.3ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.3ms)
+Started GET "/users/11" for 127.0.0.1 at 2017-10-23 13:35:52 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    1: <div class="row">
+    2:   <div class="col-md-3">
+    3:     <div class="center">
+    4:       <%= image_tag avatar_url(@user), class: "avatar-full"%>
+    5:     </div>
+    6:     <div class="panel panel-default">
+    7:       <div class="panel-heading">
+  
+app/helpers/application_helper.rb:3:in `avatar_url'
+app/views/users/show.html.erb:4:in `_app_views_users_show_html_erb__4415569800852092149_70271153623940'
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.1ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/abdallahkawji/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.5ms)
+Started GET "/users/11" for 127.0.0.1 at 2017-10-23 13:36:33 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from show at /Users/abdallahkawji/c4m/app/controllers/users_controller.rb:3)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from show at /Users/abdallahkawji/c4m/app/controllers/users_controller.rb:3)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.0ms)
+  Rendered shared/_message.html.erb (1.1ms)
+Completed 200 OK in 133ms (Views: 88.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2017-10-23 14:15:11 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (16.7ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (13.2ms)
+  Rendered shared/_message.html.erb (1.0ms)
+Completed 200 OK in 330ms (Views: 285.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2017-10-23 14:17:17 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.3ms)
+  Rendered shared/_message.html.erb (1.1ms)
+Completed 200 OK in 509ms (Views: 499.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2017-10-23 14:17:30 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (7.7ms)
+  Rendered shared/_message.html.erb (0.6ms)
+Completed 200 OK in 118ms (Views: 112.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2017-10-23 14:17:40 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.0ms)
+  Rendered shared/_message.html.erb (1.4ms)
+Completed 200 OK in 158ms (Views: 149.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-10-23 14:19:25 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered shared/_devisemes.html.erb (4.4ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (74.7ms)
+  Rendered shared/_navbar.html.erb (7.4ms)
+  Rendered shared/_message.html.erb (3.0ms)
+Completed 200 OK in 316ms (Views: 290.1ms | ActiveRecord: 2.7ms)
+
+
