@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">c4m_Project_Name</a>
+      <a class="navbar-brand" href="/">c4m_Project_Name</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
@@ -18,7 +18,8 @@
         <% else %>
           <li>
             <!-- <img src="https://i.imgur.com/tdi3NGa.png" class="img-circle avatar_small "> -->
-            <%= image_tag avatar_url(current_user), class: "img-circle avatar-small" %>&nbsp;
+            <%= link_to image_tag( avatar_url(current_user) ,class: "img-circle avatar-small") , @user %>
+            <!-- <%= image_tag avatar_url(current_user) ,class: "img-circle avatar-small" %>&nbsp; -->
           </li>
           <li class="dropdown">
             <!-- TODO Profile Picture, using gravatar isn't a solution -->
